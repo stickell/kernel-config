@@ -1,0 +1,27 @@
+1. DESCRIPTION
+
+Personal configuration of the Linux kernel with patch Con Kolivas.
+Initrd not needed.
+
+2. HARDWARE DESCRIPTION
+
+Motherboard:	ASUS M2N-E
+CPU:		AMD Athlon 64 3500+
+RAM:		Kingston 2GB
+Graphic card:	XFX nVidia GTS 250 512MB
+Hard Disk:	1x Seagate 80GB 7200rpm 8MB
+		2x Seagate 320GB 7200rpm 16MB (Mirrored)
+Optical drive:	1x Plextor PX-810SA
+		1x Plextor PX-716A
+Network:	Integrated Ethernet 10/100/1000
+		External wireless USB stick (rt-73)
+
+2. HOW TO COMPILE
+
+$ Copy the .config in the kernel source directory (Con Kolivas patched).
+$ make modules_prepare
+$ make all
+$ make headers_install
+# make install
+# update-grub
+$ make clean && make mrproper
